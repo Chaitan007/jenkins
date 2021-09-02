@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: jenkins-pv
+  #namespace: jenkins
+spec:
+  storageClassName: hostpath
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/Users/chaitanyachilakamary/Desktop/study/jenkins/data_jenkins/"
